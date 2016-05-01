@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    
+    <head >
+        <script src="js/libs/angular.min.js"></script>
+        <script src="js/libs/angular-route.js"></script>
+        <script src="app.js"></script>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <title>sample app</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body ng-app="app">
+        <div ng-controller="AppController">
+            <!-- Pagina Login -->
+            <div ng-show="mostrarLogin">
+                <div id="content">
+                    {{ greeting }}
+                </div>
+                <div id="navigation">
+                    <button ng-click="irAPagina1()">
+                        Ir a Pagina 1
+                    </button>
+                    <button ng-click="irAPagina2()">
+                        Ir a Pagina 2
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Pagina 1 -->
+            <div ng-show="mostrarPagina1">
+                <div id="content">
+                    Pagina 1
+                </div>
+                <div id="navigation">
+                    <button ng-click="irALogin()">
+                        Volver
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Pagina 2 -->
+            <div ng-show="mostrarPagina2">
+                <div id="content">
+                    Pagina 2
+                </div>
+                <div id="navigation">
+                    <button ng-click="irALogin()">
+                        Volver
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+    </body>
+</html>
